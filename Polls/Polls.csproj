@@ -11,6 +11,7 @@
     <AssemblyName>Polls</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DeviceId, Version=5.1.1.0, Culture=neutral, PublicKeyToken=f755c371b5c59c52, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeviceId.5.1.1\lib\net40\DeviceId.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,14 +58,236 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ApiRequests.cs" />
+    <Compile Include="Crypt.cs" />
+    <Compile Include="ErrorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MD5Handler.cs" />
+    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Slide.cs" />
+    <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\TestCard.cs" />
+    <Compile Include="MyControls\ICheckable.cs" />
+    <Compile Include="MyControls\MyCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControls\MyRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditProfileUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditProfileUC.Designer.cs">
+      <DependentUpon>EditProfileUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTest\ActionBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTest\ActionBar.Designer.cs">
+      <DependentUpon>ActionBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTest\AnswerAddItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTest\AnswerAddItemUC.Designer.cs">
+      <DependentUpon>AnswerAddItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTest\AnswerItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTest\AnswerItemUC.Designer.cs">
+      <DependentUpon>AnswerItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTest\EditSlideUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTest\EditSlideUC.Designer.cs">
+      <DependentUpon>EditSlideUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTest\EditTestMainUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTest\EditTestMainUC.Designer.cs">
+      <DependentUpon>EditTestMainUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTest\EditTestSlidesUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTest\EditTestSlidesUC.Designer.cs">
+      <DependentUpon>EditTestSlidesUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTest\EditTestUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTest\EditTestUC.Designer.cs">
+      <DependentUpon>EditTestUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTest\SlideItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTest\SlideItemUC.Designer.cs">
+      <DependentUpon>SlideItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ITestCardItemSubscriber.cs" />
+    <Compile Include="UserControls\MainMenu\MainMenuBottomNav.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\MainMenuBottomNav.Designer.cs">
+      <DependentUpon>MainMenuBottomNav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\MainMenuUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\MainMenuUC.Designer.cs">
+      <DependentUpon>MainMenuUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\MainUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\MainUC.Designer.cs">
+      <DependentUpon>MainUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OwnedUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OwnedUserControl.Designer.cs">
+      <DependentUpon>OwnedUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parser.cs" />
+    <Compile Include="UserControls\LoginUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LoginUC.Designer.cs">
+      <DependentUpon>LoginUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Memory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\ImageViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\ImageViewUC.Designer.cs">
+      <DependentUpon>ImageViewUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\IPassingUC.cs" />
+    <Compile Include="UserControls\PassingTest\NextSlideForm.cs" />
+    <Compile Include="UserControls\PassingTest\PassingFinishUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingFinishUC.Designer.cs">
+      <DependentUpon>PassingFinishUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingQuestionUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingQuestionUC.Designer.cs">
+      <DependentUpon>PassingQuestionUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingRateUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingRateUC.Designer.cs">
+      <DependentUpon>PassingRateUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingTestUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingTestUC.Designer.cs">
+      <DependentUpon>PassingTestUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingWelcomeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PassingTest\PassingWelcomeUC.Designer.cs">
+      <DependentUpon>PassingWelcomeUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegistrationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RegistrationUC.Designer.cs">
+      <DependentUpon>RegistrationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\SearchUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\SearchUC.Designer.cs">
+      <DependentUpon>SearchUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SplashUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SplashUC.Designer.cs">
+      <DependentUpon>SplashUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\UserProfileUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\UserProfileUC.Designer.cs">
+      <DependentUpon>UserProfileUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\UserTestsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\UserTestsUC.Designer.cs">
+      <DependentUpon>UserTestsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StatisticsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StatisticsUC.Designer.cs">
+      <DependentUpon>StatisticsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TestCardItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TestCardItemUC.Designer.cs">
+      <DependentUpon>TestCardItemUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditProfileUC.resx">
+      <DependentUpon>EditProfileUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditTest\ActionBar.resx">
+      <DependentUpon>ActionBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditTest\AnswerAddItemUC.resx">
+      <DependentUpon>AnswerAddItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditTest\AnswerItemUC.resx">
+      <DependentUpon>AnswerItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditTest\EditSlideUC.resx">
+      <DependentUpon>EditSlideUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditTest\EditTestMainUC.resx">
+      <DependentUpon>EditTestMainUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditTest\EditTestSlidesUC.resx">
+      <DependentUpon>EditTestSlidesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditTest\EditTestUC.resx">
+      <DependentUpon>EditTestUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditTest\SlideItemUC.resx">
+      <DependentUpon>SlideItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LoginUC.resx">
+      <DependentUpon>LoginUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +296,51 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainMenu\MainMenuBottomNav.resx">
+      <DependentUpon>MainMenuBottomNav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainMenu\MainUC.resx">
+      <DependentUpon>MainUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainMenu\SearchUC.resx">
+      <DependentUpon>SearchUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainMenu\UserProfileUC.resx">
+      <DependentUpon>UserProfileUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainMenu\UserTestsUC.resx">
+      <DependentUpon>UserTestsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PassingTest\ImageViewUC.resx">
+      <DependentUpon>ImageViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PassingTest\PassingFinishUC.resx">
+      <DependentUpon>PassingFinishUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PassingTest\PassingQuestionUC.resx">
+      <DependentUpon>PassingQuestionUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PassingTest\PassingRateUC.resx">
+      <DependentUpon>PassingRateUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PassingTest\PassingWelcomeUC.resx">
+      <DependentUpon>PassingWelcomeUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RegistrationUC.resx">
+      <DependentUpon>RegistrationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SplashUC.resx">
+      <DependentUpon>SplashUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TestCardItemUC.resx">
+      <DependentUpon>TestCardItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +353,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_asc.png" />
+    <None Include="Resources\sort.png" />
+    <None Include="Resources\statistics.png" />
+    <None Include="Resources\active_off.png" />
+    <None Include="Resources\active_on.png" />
+    <Content Include="Resources\add.png" />
+    <None Include="Resources\fav_outlined.png" />
+    <None Include="Resources\fav_filled.png" />
+    <None Include="Resources\copy_link.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\ten_stars_outlined.png" />
+    <None Include="Resources\ten_stars_filled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
