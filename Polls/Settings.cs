@@ -139,7 +139,7 @@ namespace Polls
             get
             {
                 return string.Concat(
-                            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "/Pools");
+                            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "/Polls");
             }
         }
     }
