@@ -119,16 +119,17 @@ namespace Polls.UserControls.MainMenu
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 136);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(455, 143);
             this.flowLayoutPanel1.TabIndex = 9;
-            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.WrapContents = false;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Polls.Properties.Resources.back_arrow;
             this.pictureBox1.Location = new System.Drawing.Point(7, 15);
             this.pictureBox1.Name = "pictureBox1";
@@ -157,7 +158,6 @@ namespace Polls.UserControls.MainMenu
             ((System.ComponentModel.ISupportInitialize)(this.editPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.VisibleChanged += delegate (object o, EventArgs e) { this.flowLayoutPanel1.Focus(); }; // doesn't work
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -58,6 +58,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Polls.Properties.Resources.sort;
             this.pictureBox1.Location = new System.Drawing.Point(438, 11);
             this.pictureBox1.Name = "pictureBox1";

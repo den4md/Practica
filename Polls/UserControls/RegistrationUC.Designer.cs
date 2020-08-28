@@ -110,6 +110,7 @@
             // 
             // submitButton
             // 
+            this.submitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitButton.Location = new System.Drawing.Point(172, 224);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(123, 37);
@@ -121,6 +122,7 @@
             // loginLinkLabel
             // 
             this.loginLinkLabel.AutoSize = true;
+            this.loginLinkLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginLinkLabel.Location = new System.Drawing.Point(140, 275);
             this.loginLinkLabel.Name = "loginLinkLabel";
             this.loginLinkLabel.Size = new System.Drawing.Size(186, 13);

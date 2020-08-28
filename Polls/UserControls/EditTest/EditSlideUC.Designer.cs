@@ -54,6 +54,7 @@ namespace Polls.UserControls.EditTest
             // 
             // comboBox1
             // 
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Items.AddRange(new object[] {
             "one",
@@ -68,6 +69,7 @@ namespace Polls.UserControls.EditTest
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Polls.Properties.Resources.logo1;
             this.pictureBox2.Location = new System.Drawing.Point(48, 22);
             this.pictureBox2.Name = "pictureBox2";
@@ -127,8 +129,8 @@ namespace Polls.UserControls.EditTest
             this.textBox2.Size = new System.Drawing.Size(118, 20);
             this.textBox2.TabIndex = 23;
             this.textBox2.Text = "Другое";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Visible = false;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox1
             // 
@@ -167,7 +169,6 @@ namespace Polls.UserControls.EditTest
             this.Controls.Add(this.pictureBox1);
             this.Name = "EditSlideUC";
             this.Size = new System.Drawing.Size(464, 322);
-            //this.VisibleChanged += new System.EventHandler(this.EditSlideUC_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

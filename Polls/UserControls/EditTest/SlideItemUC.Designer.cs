@@ -57,6 +57,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Polls.Properties.Resources.edit;
             this.pictureBox2.Location = new System.Drawing.Point(278, 19);
             this.pictureBox2.Name = "pictureBox2";
@@ -68,6 +69,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Polls.Properties.Resources.delete;
             this.pictureBox1.Location = new System.Drawing.Point(307, 19);
             this.pictureBox1.Name = "pictureBox1";

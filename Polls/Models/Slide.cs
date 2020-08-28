@@ -71,7 +71,7 @@ namespace Polls.Models
 
         private bool makeError(string s)
         {
-            MessageBox.Show(s, "Твоя жизнь", MessageBoxButtons.OK);
+            MessageBox.Show(s, "Ошибка", MessageBoxButtons.OK);
 
             return false;
         }

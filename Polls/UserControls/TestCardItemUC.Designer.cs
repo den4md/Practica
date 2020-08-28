@@ -57,6 +57,7 @@
             // 
             // label1
             // 
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
@@ -88,6 +89,7 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::Polls.Properties.Resources.statistics;
             this.pictureBox8.Location = new System.Drawing.Point(404, 95);
             this.pictureBox8.Name = "pictureBox8";
@@ -100,6 +102,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Polls.Properties.Resources.delete;
             this.pictureBox5.Location = new System.Drawing.Point(404, 51);
             this.pictureBox5.Name = "pictureBox5";
@@ -112,6 +115,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Polls.Properties.Resources.copy_link;
             this.pictureBox4.Location = new System.Drawing.Point(404, 29);
             this.pictureBox4.Name = "pictureBox4";
@@ -124,6 +128,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Polls.Properties.Resources.fav_outlined;
             this.pictureBox3.Location = new System.Drawing.Point(404, 7);
             this.pictureBox3.Name = "pictureBox3";
@@ -136,6 +141,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::Polls.Properties.Resources.edit;
             this.pictureBox6.Location = new System.Drawing.Point(404, 73);
             this.pictureBox6.Name = "pictureBox6";
@@ -192,6 +198,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::Polls.Properties.Resources.active_on;
             this.pictureBox7.Location = new System.Drawing.Point(404, 73);
             this.pictureBox7.Name = "pictureBox7";

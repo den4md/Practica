@@ -63,6 +63,7 @@
             // 
             // labelCreated
             // 
+            this.labelCreated.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelCreated.Location = new System.Drawing.Point(0, 0);
             this.labelCreated.Name = "labelCreated";
             this.labelCreated.Size = new System.Drawing.Size(154, 32);
@@ -73,6 +74,7 @@
             // 
             // labelPassed
             // 
+            this.labelPassed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelPassed.Location = new System.Drawing.Point(153, 0);
             this.labelPassed.Name = "labelPassed";
             this.labelPassed.Size = new System.Drawing.Size(155, 32);
@@ -83,6 +85,7 @@
             // 
             // labelFavorite
             // 
+            this.labelFavorite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelFavorite.Location = new System.Drawing.Point(307, 0);
             this.labelFavorite.Name = "labelFavorite";
             this.labelFavorite.Size = new System.Drawing.Size(157, 32);

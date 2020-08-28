@@ -69,6 +69,7 @@
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Location = new System.Drawing.Point(417, 10);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(37, 13);
@@ -109,6 +110,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(161, 286);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 23);
@@ -136,6 +138,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Polls.Properties.Resources.back_arrow;
             this.pictureBox3.Location = new System.Drawing.Point(7, 10);
             this.pictureBox3.Name = "pictureBox3";

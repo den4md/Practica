@@ -73,6 +73,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(262, 137);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -83,6 +84,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(182, 242);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 36);
@@ -93,6 +95,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Polls.Properties.Resources.copy_link;
             this.pictureBox1.Location = new System.Drawing.Point(123, 133);
             this.pictureBox1.Name = "pictureBox1";

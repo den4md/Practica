@@ -38,6 +38,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightGreen;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(292, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 29);
@@ -49,6 +50,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(70, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 29);

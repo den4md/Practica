@@ -59,6 +59,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Polls.Properties.Resources.add;
             this.pictureBox3.Location = new System.Drawing.Point(432, 242);
             this.pictureBox3.Name = "pictureBox3";
@@ -80,6 +81,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(15, 18);
             this.pictureBox1.Name = "pictureBox1";
